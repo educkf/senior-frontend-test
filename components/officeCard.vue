@@ -1,9 +1,11 @@
 <template>
-	<div
-		class="w-full h-40 flex flex-col justify-center px-5 py-4 rounded-lg shadow-lg my-3 text-white"
-	>
-		<h3 class="text-2xl font-bold">Headquarters</h3>
-		<p class="font-thin">3763 W. Dallas St.</p>
+	<div class="w-full min-h-32 mt-6 shadow-m">
+		<CardFace
+			:office="office"
+			:opened="opened"
+			@clicked="opened = !opened"
+		/>
+		<CardAddress :office="office" :opened="opened" />
 	</div>
 </template>
 
@@ -14,9 +16,13 @@ export default {
 	name: "OfficeCard",
 	components: {},
 	filters: {},
-	props: {},
+	props: {
+		office: Object,
+	},
 	data: function () {
-		return {};
+		return {
+			opened: false,
+		};
 	},
 	computed: {
 		// ...mapState({

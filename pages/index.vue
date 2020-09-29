@@ -2,23 +2,22 @@
 	<section
 		class="bg-gray-200 min-h-screen flex justify-center py-24 font-sans"
 	>
-		<section class="w-72 flex flex-col items-center">
+		<section class="w-80 flex flex-col items-center">
 			<h1 class="text-pastelGreen text-6xl font-light mb-8">Offices</h1>
 
 			<OfficeAdd />
 
-			<OfficeCard class="bg-pastelGreen" />
-			<OfficeCard class="bg-pastelYellow" />
-			<OfficeCard class="bg-pastelPink" />
-			<OfficeCard class="bg-grayLight" />
-			<OfficeCard class="bg-grayDark" />
-
+			<OfficeCard
+				v-for="office in offices"
+				:key="office.id"
+				:office="office"
+			/>
 		</section>
 	</section>
 </template>
 
 <script>
-//import { mapState, mapGetters  } from 'vuex';
+import { mapState } from "vuex";
 
 export default {
 	name: "Main",
@@ -32,9 +31,9 @@ export default {
 		return {};
 	},
 	computed: {
-		// ...mapState({
-		//   item: state => state.namespace.item
-		// }),
+		...mapState({
+			offices: (state) => state.OfficeStore.list,
+		}),
 		// ...mapGetters({
 		//   item: "namespace/item"
 		// })

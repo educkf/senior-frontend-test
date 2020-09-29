@@ -1,33 +1,42 @@
 <template>
-	<button
-		class="flex justify-between w-full bg-pastelPink text-white font-thin px-5 py-3 rounded-lg shadow-lg"
+	<div
+		@click="$emit('clicked')"
+		:class="`bg-${office.color}`"
+		class="w-full h-32 relative z-20 flex items-center justify-between px-6 py-4 rounded-lg shadow-lg text-white cursor-pointer"
 	>
-		Add New Location
+		<div>
+			<h3 class="text-2xl font-bold">{{ office.title }}</h3>
+			<p class="font-thin">{{ office.address }}</p>
+		</div>
 
 		<svg
-			class="h-6 w-6"
-			stroke="currentColor"
+			class="h-6 w-6 transition-transform duration-200 transform"
+			:class="{ 'rotate-180': opened }"
 			fill="none"
 			viewBox="0 0 24 24"
+			stroke="currentColor"
 		>
 			<path
 				stroke-linecap="round"
 				stroke-linejoin="round"
 				stroke-width="2"
-				d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+				d="M19 9l-7 7-7-7"
 			/>
 		</svg>
-	</button>
+	</div>
 </template>
 
 <script>
 //import { mapState, mapGetters } from 'vuex';
 
 export default {
-	name: "OfficeAdd",
+	name: "CardFace",
 	components: {},
 	filters: {},
-	props: {},
+	props: {
+		office: Object,
+		opened: Boolean,
+	},
 	data: function () {
 		return {};
 	},

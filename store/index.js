@@ -1,6 +1,4 @@
-export const state = () => ({
-	offices: [],
-});
+export const state = () => ({});
 
 export const mutations = {};
 

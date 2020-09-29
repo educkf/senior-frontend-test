@@ -1,4 +1,16 @@
 {
+  "CardAddress": {
+    "description": "Auto imported from components/cardAddress.vue"
+  },
+  "LazyCardAddress": {
+    "description": "Auto imported from components/cardAddress.vue"
+  },
+  "CardFace": {
+    "description": "Auto imported from components/cardFace.vue"
+  },
+  "LazyCardFace": {
+    "description": "Auto imported from components/cardFace.vue"
+  },
   "OfficeAdd": {
     "description": "Auto imported from components/officeAdd.vue"
   },

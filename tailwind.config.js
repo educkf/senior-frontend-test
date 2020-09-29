@@ -14,9 +14,18 @@ module.exports = {
 				grayDark: "#313e4f",
 			},
 			spacing: {
-				...spacing,
 				72: "18rem",
 				80: "20rem",
+			},
+			maxHeight: {
+				fit: "500px",
+				0: "0",
+			},
+			minHeight: {
+				32: "8rem",
+			},
+			transitionProperty: {
+				maxHeight: "max-height",
 			},
 		},
 	},
