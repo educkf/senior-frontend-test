@@ -6,7 +6,9 @@
 	>
 		<div>
 			<h3 class="text-2xl font-bold select-text">{{ office.title }}</h3>
-			<p class="font-thin select-text">{{ office.address }}</p>
+			<address class="font-thin select-text not-italic">
+				{{ office.address }}
+			</address>
 		</div>
 
 		<svg

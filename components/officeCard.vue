@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full min-h-40 mt-6 shadow-m">
+	<div class="w-full transition-all duration-300 min-h-40 mt-6 shadow-m">
 		<CardFace
 			:office="office"
 			:opened="opened"

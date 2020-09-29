@@ -67,6 +67,26 @@ export const state = () => ({
 	],
 });
 
-export const mutations = {};
+export const mutations = {
+	SET_STORES(state, payload) {
+		state.list = payload;
+	},
+};
 
-export const actions = {};
+export const actions = {
+	deleteStore({ state, commit }, officeId) {
+		const remainingOffices = state.list.filter(
+			(office) => office.id !== officeId
+		);
+		commit("SET_STORES", remainingOffices);
+
+		commit(
+			"SET_ALERT",
+			{
+				message: "The location has been deleted.",
+				show: true,
+			},
+			{ root: true }
+		);
+	},
+};

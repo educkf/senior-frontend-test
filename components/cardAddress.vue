@@ -23,7 +23,10 @@
 					Edit
 				</button>
 
-				<button class="btn text-pastelPink hover:text-red-500">
+				<button
+					@click="deleteOffice()"
+					class="btn text-pastelPink hover:text-red-500"
+				>
 					<TrashIcon />
 					Delete
 				</button>
@@ -50,7 +53,11 @@ export default {
 	watch: {},
 	async created() {},
 	async mounted() {},
-	methods: {},
+	methods: {
+		deleteOffice() {
+			this.$store.dispatch("OfficeStore/deleteStore", this.office.id);
+		},
+	},
 };
 </script>
 

@@ -1,6 +1,7 @@
-<template>
+<template functional>
 	<svg
 		class="h-6 w-6 mr-2"
+		:class="data.staticClass"
 		fill="none"
 		viewBox="0 0 24 24"
 		stroke="currentColor"
@@ -15,28 +16,8 @@
 </template>
 
 <script>
-//import { mapState, mapGetters } from 'vuex';
-
 export default {
 	name: "TrashIcon",
-	components: {},
-	filters: {},
-	props: {},
-	data: function () {
-		return {};
-	},
-	computed: {
-		// ...mapState({
-		//   item: state => state.namespace.item
-		// }),
-		// ...mapGetters({
-		//   item: "namespace/item"
-		// })
-	},
-	watch: {},
-	async created() {},
-	async mounted() {},
-	methods: {},
 };
 </script>
 

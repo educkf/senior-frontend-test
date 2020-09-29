@@ -1,4 +1,10 @@
 {
+  "AlertMessage": {
+    "description": "Auto imported from components/AlertMessage.vue"
+  },
+  "LazyAlertMessage": {
+    "description": "Auto imported from components/AlertMessage.vue"
+  },
   "CardAddress": {
     "description": "Auto imported from components/cardAddress.vue"
   },
@@ -34,6 +40,18 @@
   },
   "LazyBasePage": {
     "description": "Auto imported from components/_basePage.vue"
+  },
+  "CheckIcon": {
+    "description": "Auto imported from components/icons/CheckIcon.vue"
+  },
+  "LazyCheckIcon": {
+    "description": "Auto imported from components/icons/CheckIcon.vue"
+  },
+  "CloseIcon": {
+    "description": "Auto imported from components/icons/CloseIcon.vue"
+  },
+  "LazyCloseIcon": {
+    "description": "Auto imported from components/icons/CloseIcon.vue"
   },
   "PencilIcon": {
     "description": "Auto imported from components/icons/PencilIcon.vue"
