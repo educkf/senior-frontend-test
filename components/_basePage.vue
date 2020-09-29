@@ -3,13 +3,16 @@
 </template>
 
 <script>
-//import { mapState, mapGetters } from 'vuex';
+//import { mapState, mapGetters  } from 'vuex';
 
 export default {
-	name: "OfficeCard",
+	name: "",
+	layout: "default",
 	components: {},
 	filters: {},
 	props: {},
+	async fetch() {},
+	async asyncData() {},
 	data: function () {
 		return {};
 	},
@@ -25,6 +28,18 @@ export default {
 	async created() {},
 	async mounted() {},
 	methods: {},
+	head() {
+		return {
+			title: "Page title",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: "My custom description",
+				},
+			],
+		};
+	},
 };
 </script>
 

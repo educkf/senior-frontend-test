@@ -6,7 +6,7 @@
 //import { mapState, mapGetters } from 'vuex';
 
 export default {
-	name: "OfficeCard",
+	name: "",
 	components: {},
 	filters: {},
 	props: {},

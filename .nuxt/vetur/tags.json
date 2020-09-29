@@ -1,0 +1,26 @@
+{
+  "OfficeAdd": {
+    "description": "Auto imported from components/officeAdd.vue"
+  },
+  "LazyOfficeAdd": {
+    "description": "Auto imported from components/officeAdd.vue"
+  },
+  "OfficeCard": {
+    "description": "Auto imported from components/officeCard.vue"
+  },
+  "LazyOfficeCard": {
+    "description": "Auto imported from components/officeCard.vue"
+  },
+  "BaseComponent": {
+    "description": "Auto imported from components/_baseComponent.vue"
+  },
+  "LazyBaseComponent": {
+    "description": "Auto imported from components/_baseComponent.vue"
+  },
+  "BasePage": {
+    "description": "Auto imported from components/_basePage.vue"
+  },
+  "LazyBasePage": {
+    "description": "Auto imported from components/_basePage.vue"
+  }
+}
