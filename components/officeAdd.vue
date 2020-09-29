@@ -1,5 +1,6 @@
 <template>
-	<button
+  <OfficeForm />
+	<!-- <button
 		class="flex justify-between w-full bg-pastelPink text-white font-thin px-5 py-3 rounded-lg shadow-lg"
 	>
 		Add New Location
@@ -17,7 +18,7 @@
 				d="M12 6v6m0 0v6m0-6h6m-6 0H6"
 			/>
 		</svg>
-	</button>
+	</button> -->
 </template>
 
 <script>

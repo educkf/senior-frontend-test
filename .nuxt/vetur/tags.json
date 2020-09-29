@@ -17,6 +17,12 @@
   "LazyCardFace": {
     "description": "Auto imported from components/cardFace.vue"
   },
+  "ColorPicker": {
+    "description": "Auto imported from components/ColorPicker.vue"
+  },
+  "LazyColorPicker": {
+    "description": "Auto imported from components/ColorPicker.vue"
+  },
   "OfficeAdd": {
     "description": "Auto imported from components/officeAdd.vue"
   },
@@ -28,6 +34,12 @@
   },
   "LazyOfficeCard": {
     "description": "Auto imported from components/officeCard.vue"
+  },
+  "OfficeForm": {
+    "description": "Auto imported from components/officeForm.vue"
+  },
+  "LazyOfficeForm": {
+    "description": "Auto imported from components/officeForm.vue"
   },
   "BaseComponent": {
     "description": "Auto imported from components/_baseComponent.vue"
@@ -58,6 +70,12 @@
   },
   "LazyPencilIcon": {
     "description": "Auto imported from components/icons/PencilIcon.vue"
+  },
+  "ToggleIcon": {
+    "description": "Auto imported from components/icons/ToggleIcon.vue"
+  },
+  "LazyToggleIcon": {
+    "description": "Auto imported from components/icons/ToggleIcon.vue"
   },
   "TrashIcon": {
     "description": "Auto imported from components/icons/TrashIcon.vue"

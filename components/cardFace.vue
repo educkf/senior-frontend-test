@@ -11,20 +11,10 @@
 			</address>
 		</div>
 
-		<svg
-			class="h-6 w-6 transition-transform duration-200 transform"
+		<ToggleIcon
+			class="transition-transform duration-200 transform"
 			:class="{ 'rotate-180': opened }"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke="currentColor"
-		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M19 9l-7 7-7-7"
-			/>
-		</svg>
+		/>
 	</div>
 </template>
 
