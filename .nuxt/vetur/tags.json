@@ -34,5 +34,17 @@
   },
   "LazyBasePage": {
     "description": "Auto imported from components/_basePage.vue"
+  },
+  "PencilIcon": {
+    "description": "Auto imported from components/icons/PencilIcon.vue"
+  },
+  "LazyPencilIcon": {
+    "description": "Auto imported from components/icons/PencilIcon.vue"
+  },
+  "TrashIcon": {
+    "description": "Auto imported from components/icons/TrashIcon.vue"
+  },
+  "LazyTrashIcon": {
+    "description": "Auto imported from components/icons/TrashIcon.vue"
   }
 }
