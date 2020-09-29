@@ -1,8 +1,19 @@
 <template>
-	<section class="bg-gray-200 min-h-screen flex justify-center py-24">
-		<h1>Offices</h1>
+	<section
+		class="bg-gray-200 min-h-screen flex justify-center py-24 font-sans"
+	>
+		<section class="w-72 flex flex-col items-center">
+			<h1 class="text-pastelGreen text-6xl font-light mb-8">Offices</h1>
 
-    
+			<OfficeAdd />
+
+			<OfficeCard class="bg-pastelGreen" />
+			<OfficeCard class="bg-pastelYellow" />
+			<OfficeCard class="bg-pastelPink" />
+			<OfficeCard class="bg-grayLight" />
+			<OfficeCard class="bg-grayDark" />
+
+		</section>
 	</section>
 </template>
 
@@ -34,7 +45,7 @@ export default {
 	methods: {},
 	head() {
 		return {
-			title: "Page title",
+			title: "Dog and Pony Senior FrontEnd Test",
 			meta: [
 				{
 					hid: "description",
@@ -47,4 +58,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+@import url("https://use.typekit.net/lyg3ywe.css");
+</style>

@@ -1,5 +1,10 @@
 <template>
-	<div />
+	<div
+		class="w-full h-40 flex flex-col justify-center px-5 py-4 rounded-lg shadow-lg my-3 text-white"
+	>
+		<h3 class="text-2xl font-bold">Headquarters</h3>
+		<p class="font-thin">3763 W. Dallas St.</p>
+	</div>
 </template>
 
 <script>

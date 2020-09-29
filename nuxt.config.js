@@ -1,9 +1,7 @@
 export default {
 	mode: "universal",
 	components: true,
-	/*
-	 * Headers of the page
-	 */
+
 	head: {
 		title: process.env.npm_package_name || "",
 		meta: [
@@ -21,31 +19,15 @@ export default {
 		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 	},
 
-	/*
-	 * Plugins to load before mounting the App
-	 */
 	plugins: [],
 
-	/*
-	 * Nuxt.js dev-modules
-	 */
 	buildModules: [
-		// Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-		"@nuxtjs/tailwindcss",
+		"@nuxtjs/tailwindcss", // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
 	],
 
-	/*
-	 * Nuxt.js modules
-	 */
 	modules: [],
 
-	/*
-	 * Build configuration
-	 */
 	build: {
-		/*
-		 * You can extend webpack config here
-		 */
 		extend(config, ctx) {},
 	},
 };
