@@ -40,7 +40,7 @@ export const state = () => ({
 		},
 
 		{
-			id: 1,
+			id: 4,
 			title: "Headquarters 4",
 			address: "3763 W. Dallas St.",
 			color: "grayLight",
@@ -53,7 +53,7 @@ export const state = () => ({
 		},
 
 		{
-			id: 1,
+			id: 5,
 			title: "Headquarters 5",
 			address: "3763 W. Dallas St.",
 			color: "grayDark",

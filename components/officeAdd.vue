@@ -25,8 +25,6 @@
 
 export default {
 	name: "OfficeAdd",
-	components: {},
-	filters: {},
 	props: {},
 	data: function () {
 		return {};

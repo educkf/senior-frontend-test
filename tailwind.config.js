@@ -23,6 +23,7 @@ module.exports = {
 			},
 			minHeight: {
 				32: "8rem",
+				40: "10rem",
 			},
 			transitionProperty: {
 				maxHeight: "max-height",

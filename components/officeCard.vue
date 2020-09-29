@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full min-h-32 mt-6 shadow-m">
+	<div class="w-full min-h-40 mt-6 shadow-m">
 		<CardFace
 			:office="office"
 			:opened="opened"
@@ -10,12 +10,8 @@
 </template>
 
 <script>
-//import { mapState, mapGetters } from 'vuex';
-
 export default {
 	name: "OfficeCard",
-	components: {},
-	filters: {},
 	props: {
 		office: Object,
 	},
@@ -24,14 +20,7 @@ export default {
 			opened: false,
 		};
 	},
-	computed: {
-		// ...mapState({
-		//   item: state => state.namespace.item
-		// }),
-		// ...mapGetters({
-		//   item: "namespace/item"
-		// })
-	},
+	computed: {},
 	watch: {},
 	async created() {},
 	async mounted() {},

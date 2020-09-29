@@ -12,6 +12,17 @@
 				:key="office.id"
 				:office="office"
 			/>
+
+			<p class="text-center text-gray-500 mt-6">
+				This project is for test purpose only.
+			</p>
+			<p>
+				<a
+					href="https://www.dogandponystudios.com/"
+					class="uppercase text-pastelGreen text-xs opacity-75"
+					>www.dogandponystudio.com</a
+				>
+			</p>
 		</section>
 	</section>
 </template>

@@ -2,11 +2,11 @@
 	<div
 		@click="$emit('clicked')"
 		:class="`bg-${office.color}`"
-		class="w-full h-32 relative z-20 flex items-center justify-between px-6 py-4 rounded-lg shadow-lg text-white cursor-pointer"
+		class="w-full h-40 relative z-20 flex items-center justify-between px-6 py-4 rounded-lg shadow-lg text-white cursor-pointer select-none"
 	>
 		<div>
-			<h3 class="text-2xl font-bold">{{ office.title }}</h3>
-			<p class="font-thin">{{ office.address }}</p>
+			<h3 class="text-2xl font-bold select-text">{{ office.title }}</h3>
+			<p class="font-thin select-text">{{ office.address }}</p>
 		</div>
 
 		<svg
@@ -27,12 +27,8 @@
 </template>
 
 <script>
-//import { mapState, mapGetters } from 'vuex';
-
 export default {
 	name: "CardFace",
-	components: {},
-	filters: {},
 	props: {
 		office: Object,
 		opened: Boolean,
@@ -40,14 +36,7 @@ export default {
 	data: function () {
 		return {};
 	},
-	computed: {
-		// ...mapState({
-		//   item: state => state.namespace.item
-		// }),
-		// ...mapGetters({
-		//   item: "namespace/item"
-		// })
-	},
+	computed: {},
 	watch: {},
 	async created() {},
 	async mounted() {},
