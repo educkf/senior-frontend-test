@@ -9,7 +9,7 @@
 	>
 		<div
 			v-if="alert && alert.show"
-			class="bg-white w-full fixed top-0 py-6"
+			class="bg-white w-full fixed top-0 py-6 z-50"
 		>
 			<div class="w-80 m-auto flex px-4">
 				<CheckIcon class="text-pastelGreen mr-4" />
@@ -17,7 +17,10 @@
 					{{ alert.message }}
 				</p>
 
-				<button @click="closeAlert()" class="fixed right-0 mr-6">
+				<button
+					@click.prevent="closeAlert()"
+					class="fixed right-0 mr-6"
+				>
 					<CloseIcon class="text-gray-500" />
 				</button>
 			</div>

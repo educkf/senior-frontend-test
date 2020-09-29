@@ -5,6 +5,12 @@
   "LazyAlertMessage": {
     "description": "Auto imported from components/AlertMessage.vue"
   },
+  "AppInput": {
+    "description": "Auto imported from components/AppInput.vue"
+  },
+  "LazyAppInput": {
+    "description": "Auto imported from components/AppInput.vue"
+  },
   "CardAddress": {
     "description": "Auto imported from components/cardAddress.vue"
   },
@@ -64,6 +70,12 @@
   },
   "LazyCloseIcon": {
     "description": "Auto imported from components/icons/CloseIcon.vue"
+  },
+  "ErrorIcon": {
+    "description": "Auto imported from components/icons/ErrorIcon.vue"
+  },
+  "LazyErrorIcon": {
+    "description": "Auto imported from components/icons/ErrorIcon.vue"
   },
   "PencilIcon": {
     "description": "Auto imported from components/icons/PencilIcon.vue"

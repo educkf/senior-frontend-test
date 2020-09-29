@@ -1,24 +1,28 @@
 <template>
-  <OfficeForm />
-	<!-- <button
-		class="flex justify-between w-full bg-pastelPink text-white font-thin px-5 py-3 rounded-lg shadow-lg"
-	>
-		Add New Location
-
-		<svg
-			class="h-6 w-6"
-			stroke="currentColor"
-			fill="none"
-			viewBox="0 0 24 24"
+	<section class="w-full">
+		<button
+			v-if="!adding"
+			@click.prevent="adding = true"
+			class="flex justify-between w-full bg-pastelPink text-white font-thin px-5 py-3 rounded-lg shadow-lg"
 		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-			/>
-		</svg>
-	</button> -->
+			Add New Location
+
+			<svg
+				class="h-6 w-6"
+				stroke="currentColor"
+				fill="none"
+				viewBox="0 0 24 24"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+				/>
+			</svg>
+		</button>
+		<OfficeForm v-if="adding" @close="adding = false" />
+	</section>
 </template>
 
 <script>
@@ -28,7 +32,9 @@ export default {
 	name: "OfficeAdd",
 	props: {},
 	data: function () {
-		return {};
+		return {
+			adding: false,
+		};
 	},
 	computed: {
 		// ...mapState({

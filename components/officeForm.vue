@@ -1,57 +1,102 @@
 <template>
-	<form class="w-full bg-white rounded-md shadow-md px-5 pt-3 pb-5">
+	<form
+		@submit.prevent="handleSubmit()"
+		class="w-full bg-white rounded-md shadow-md px-5 pt-3 pb-5"
+	>
 		<header class="flex justify-between mb-10">
 			<span class="font-bold">New Location</span>
-			<CloseIcon class="opacity-50" />
+			<button @click.prevent="$emit('close')">
+				<CloseIcon class="opacity-50" />
+			</button>
 		</header>
 
-		<ColorPicker class="mb-6" />
+		<ColorPicker v-model="color" class="mb-6" />
 
-		<label class="input-group">
-			<span class="label">Title *</span>
-			<input type="text" v-model="title" class="text" />
-		</label>
+		<AppInput
+			label="Title"
+			:isRequired="true"
+			:showError="submited"
+			v-model="title"
+		/>
 
-		<label class="input-group">
-			<span class="label">Enter the address *</span>
-			<input type="text" v-model="address" class="text" />
-		</label>
+		<AppInput
+			label="Enter the address"
+			:isRequired="true"
+			:showError="submited"
+			v-model="address"
+		/>
 
-    <h3 class="uppercase text-pastelGreen border-b border-gray-300 pb-2 text-xs">Contact information</h3>
+		<h3
+			class="uppercase text-pastelGreen border-b border-gray-300 pb-2 my-2 text-xs"
+		>
+			Contact information
+		</h3>
 
-    <label class="input-group">
-			<span class="label">Full name *</span>
-			<input type="text" v-model="fullName" class="text" />
-		</label>
+		<AppInput
+			label="Full name"
+			:isRequired="true"
+			:showError="submited"
+			v-model="fullName"
+		/>
 
-    <label class="input-group">
-			<span class="label">Job position *</span>
-			<input type="text" v-model="jobPosition" class="text" />
-		</label>
+		<AppInput
+			label="Job position"
+			:isRequired="true"
+			:showError="submited"
+			v-model="jobPosition"
+		/>
 
-    <label class="input-group">
-			<span class="label">Email address *</span>
-			<input type="text" v-model="email" placeholder="name@example.com" class="text" />
-		</label>
+		<AppInput
+			label="Email address"
+			:isRequired="true"
+			:showError="submited"
+			v-model="email"
+			validateAs="email"
+			placeholder="name@example.com"
+		/>
 
-    <label class="input-group">
-			<span class="label">Phone *</span>
-			<input type="text" v-model="phone" placeholder="(XXX) XXX-XXXX" class="text" />
-		</label>
+		<AppInput
+			label="Phone"
+			:isRequired="true"
+			:showError="submited"
+			v-model="phone"
+			type="phone"
+			placeholder="(XXX) XXX-XXXX"
+		/>
 
+		<button
+			type="submit"
+			class="button"
+			:class="isValid ? 'bg-pastelGreen' : 'bg-gray-300'"
+		>
+			Save
+		</button>
 	</form>
 </template>
 
 <script>
 //import { mapState, mapGetters } from 'vuex';
+import { validateEmail } from "@/helpers";
 
 export default {
 	name: "OfficeForm",
-	props: {},
+	props: {
+		editingStore: {
+			type: Object,
+		},
+	},
 	data: function () {
 		return {
-			title: "Headquarters",
-			address: "3763 W. Dallas St.",
+			id: null,
+			title: "",
+			address: "",
+			fullName: "",
+			jobPosition: "",
+			email: "",
+			phone: "",
+			color: "pastelYellow",
+
+			submited: false,
 		};
 	},
 	computed: {
@@ -61,11 +106,58 @@ export default {
 		// ...mapGetters({
 		//   item: "namespace/item"
 		// })
+
+		isValid() {
+			if (
+				this.title === "" ||
+				this.address === "" ||
+				this.fullName === "" ||
+				this.jobPosition === "" ||
+				this.email === "" ||
+				this.phone === ""
+			)
+				return false;
+
+			// https://stackoverflow.com/a/18964976/2302583
+			var testEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			if (!validateEmail(this.email)) return false;
+
+			return true;
+		},
 	},
 	watch: {},
-	async created() {},
+	async created() {
+		if (this.editingStore && this.editingStore.id) {
+			this.id = this.editingStore.id;
+			this.title = this.editingStore.title;
+			this.address = this.editingStore.address;
+			this.fullName = this.editingStore.contact.fullName;
+			this.jobPosition = this.editingStore.contact.jobPosition;
+			this.email = this.editingStore.contact.email;
+			this.phone = this.editingStore.contact.phone;
+		}
+	},
 	async mounted() {},
-	methods: {},
+	methods: {
+		handleSubmit() {
+			this.submited = true;
+
+			if (!this.isValid) return false;
+
+			this.$store.dispatch("OfficeStore/upsertStore", {
+				id: this.id,
+				title: this.title,
+				address: this.address,
+				color: this.color,
+				contact: {
+					fullName: this.fullName,
+					jobPosition: this.jobPosition,
+					email: this.email,
+					phone: this.phone,
+				},
+			});
+		},
+	},
 };
 </script>
 

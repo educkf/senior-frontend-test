@@ -74,6 +74,31 @@ export const mutations = {
 };
 
 export const actions = {
+	upsertStore({ state, commit }, data) {
+		let templist = [];
+		if (data.id) {
+			const index = state.list.findIndex(
+				(office) => office.id === data.id
+			);
+			templist = JSON.parse(JSON.stringify(state.list));
+			templist[index] = data;
+		} else {
+			data.id = Math.random() * 101 + 11;
+			templist = [data, ...state.list];
+		}
+		commit("SET_STORES", templist);
+		commit(
+			"SET_ALERT",
+			{
+				message: `The location has been ${
+					data.id ? "updated" : "added"
+				}.`,
+				show: true,
+			},
+			{ root: true }
+		);
+	},
+
 	deleteStore({ state, commit }, officeId) {
 		const remainingOffices = state.list.filter(
 			(office) => office.id !== officeId
