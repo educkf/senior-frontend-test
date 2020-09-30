@@ -8,8 +8,8 @@ export const state = () => ({
 			contact: {
 				fullName: "Peter Johnson",
 				jobPosition: "Designer",
-				email: "eduardo.ckf@gmail.com",
-				phone: "(11) 99304-7673",
+				email: "peterjohnson@email.com",
+				phone: "(111) 954-6846",
 			},
 		},
 
@@ -21,8 +21,8 @@ export const state = () => ({
 			contact: {
 				fullName: "Peter Johnson",
 				jobPosition: "Designer",
-				email: "eduardo.ckf@gmail.com",
-				phone: "(11) 99304-7673",
+				email: "peterjohnson@email.com",
+				phone: "(111) 954-6846",
 			},
 		},
 
@@ -34,8 +34,8 @@ export const state = () => ({
 			contact: {
 				fullName: "Peter Johnson",
 				jobPosition: "Designer",
-				email: "eduardo.ckf@gmail.com",
-				phone: "(11) 99304-7673",
+				email: "peterjohnson@email.com",
+				phone: "(111) 954-6846",
 			},
 		},
 
@@ -47,8 +47,8 @@ export const state = () => ({
 			contact: {
 				fullName: "Peter Johnson",
 				jobPosition: "Designer",
-				email: "eduardo.ckf@gmail.com",
-				phone: "(11) 99304-7673",
+				email: "peterjohnson@email.com",
+				phone: "(111) 954-6846",
 			},
 		},
 
@@ -60,8 +60,8 @@ export const state = () => ({
 			contact: {
 				fullName: "Peter Johnson",
 				jobPosition: "Designer",
-				email: "eduardo.ckf@gmail.com",
-				phone: "(11) 99304-7673",
+				email: "peterjohnson@email.com",
+				phone: "(111) 954-6846",
 			},
 		},
 	],

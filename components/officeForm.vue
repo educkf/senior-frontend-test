@@ -4,7 +4,7 @@
 		class="w-full bg-white rounded-md shadow-md px-5 pt-3 pb-5"
 	>
 		<header class="flex justify-between mb-10">
-			<span class="font-bold">New Location</span>
+			<span class="font-bold">{{ id ? "Edit" : "New"}} Location</span>
 			<button @click.prevent="$emit('close')">
 				<CloseIcon class="opacity-50" />
 			</button>
