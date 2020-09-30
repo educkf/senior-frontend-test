@@ -1,8 +1,8 @@
-export { default as AlertMessage } from '../..\\components\\AlertMessage.vue'
+export { default as AlertMessage } from '../..\\components\\alertMessage.vue'
 export { default as CardAddress } from '../..\\components\\cardAddress.vue'
 export { default as CardFace } from '../..\\components\\cardFace.vue'
-export { default as ColorPicker } from '../..\\components\\ColorPicker.vue'
-export { default as InputField } from '../..\\components\\InputField.vue'
+export { default as ColorPicker } from '../..\\components\\colorPicker.vue'
+export { default as InputField } from '../..\\components\\inputField.vue'
 export { default as OfficeAdd } from '../..\\components\\officeAdd.vue'
 export { default as OfficeCard } from '../..\\components\\officeCard.vue'
 export { default as OfficeForm } from '../..\\components\\officeForm.vue'
@@ -16,11 +16,11 @@ export { default as ToggleIcon } from '../..\\components\\icons\\ToggleIcon.vue'
 export { default as TrashIcon } from '../..\\components\\icons\\TrashIcon.vue'
 export { default as TransitionOutin } from '../..\\components\\transitions\\transitionOutin.vue'
 
-export const LazyAlertMessage = import('../..\\components\\AlertMessage.vue' /* webpackChunkName: "components_AlertMessage" */).then(c => c.default || c)
+export const LazyAlertMessage = import('../..\\components\\alertMessage.vue' /* webpackChunkName: "components_alertMessage" */).then(c => c.default || c)
 export const LazyCardAddress = import('../..\\components\\cardAddress.vue' /* webpackChunkName: "components_cardAddress" */).then(c => c.default || c)
 export const LazyCardFace = import('../..\\components\\cardFace.vue' /* webpackChunkName: "components_cardFace" */).then(c => c.default || c)
-export const LazyColorPicker = import('../..\\components\\ColorPicker.vue' /* webpackChunkName: "components_ColorPicker" */).then(c => c.default || c)
-export const LazyInputField = import('../..\\components\\InputField.vue' /* webpackChunkName: "components_InputField" */).then(c => c.default || c)
+export const LazyColorPicker = import('../..\\components\\colorPicker.vue' /* webpackChunkName: "components_colorPicker" */).then(c => c.default || c)
+export const LazyInputField = import('../..\\components\\inputField.vue' /* webpackChunkName: "components_inputField" */).then(c => c.default || c)
 export const LazyOfficeAdd = import('../..\\components\\officeAdd.vue' /* webpackChunkName: "components_officeAdd" */).then(c => c.default || c)
 export const LazyOfficeCard = import('../..\\components\\officeCard.vue' /* webpackChunkName: "components_officeCard" */).then(c => c.default || c)
 export const LazyOfficeForm = import('../..\\components\\officeForm.vue' /* webpackChunkName: "components_officeForm" */).then(c => c.default || c)

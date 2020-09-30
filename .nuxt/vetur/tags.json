@@ -1,9 +1,9 @@
 {
   "AlertMessage": {
-    "description": "Auto imported from components/AlertMessage.vue"
+    "description": "Auto imported from components/alertMessage.vue"
   },
   "LazyAlertMessage": {
-    "description": "Auto imported from components/AlertMessage.vue"
+    "description": "Auto imported from components/alertMessage.vue"
   },
   "CardAddress": {
     "description": "Auto imported from components/cardAddress.vue"
@@ -18,16 +18,16 @@
     "description": "Auto imported from components/cardFace.vue"
   },
   "ColorPicker": {
-    "description": "Auto imported from components/ColorPicker.vue"
+    "description": "Auto imported from components/colorPicker.vue"
   },
   "LazyColorPicker": {
-    "description": "Auto imported from components/ColorPicker.vue"
+    "description": "Auto imported from components/colorPicker.vue"
   },
   "InputField": {
-    "description": "Auto imported from components/InputField.vue"
+    "description": "Auto imported from components/inputField.vue"
   },
   "LazyInputField": {
-    "description": "Auto imported from components/InputField.vue"
+    "description": "Auto imported from components/inputField.vue"
   },
   "OfficeAdd": {
     "description": "Auto imported from components/officeAdd.vue"
