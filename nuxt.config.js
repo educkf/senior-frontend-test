@@ -17,10 +17,14 @@ export default {
 				content: process.env.npm_package_description || "",
 			},
 		],
-		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+    {
+      rel: 'stylesheet',
+      href: 'https://use.typekit.net/lyg3ywe.css'
+    }],
 	},
 
-	plugins: [],
+  plugins: [],
 
 	buildModules: [
 		"@nuxtjs/tailwindcss", // Doc: https://github.com/nuxt-community/nuxt-tailwindcss

@@ -68,6 +68,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import url("https://use.typekit.net/lyg3ywe.css");
-</style>
+<style lang="scss"></style>

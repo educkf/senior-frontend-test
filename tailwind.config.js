@@ -42,7 +42,8 @@ module.exports = {
 				"bg-pastelGreen",
 				"bg-pastelYellow",
 				"bg-grayLight",
-				"bg-grayDark",
+        "bg-grayDark",
+        "tk-proxima-nova"
 			],
 		},
 	},
