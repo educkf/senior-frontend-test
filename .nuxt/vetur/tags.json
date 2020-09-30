@@ -5,12 +5,6 @@
   "LazyAlertMessage": {
     "description": "Auto imported from components/AlertMessage.vue"
   },
-  "AppInput": {
-    "description": "Auto imported from components/AppInput.vue"
-  },
-  "LazyAppInput": {
-    "description": "Auto imported from components/AppInput.vue"
-  },
   "CardAddress": {
     "description": "Auto imported from components/cardAddress.vue"
   },
@@ -28,6 +22,12 @@
   },
   "LazyColorPicker": {
     "description": "Auto imported from components/ColorPicker.vue"
+  },
+  "InputField": {
+    "description": "Auto imported from components/InputField.vue"
+  },
+  "LazyInputField": {
+    "description": "Auto imported from components/InputField.vue"
   },
   "OfficeAdd": {
     "description": "Auto imported from components/officeAdd.vue"

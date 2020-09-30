@@ -12,18 +12,20 @@
 
 		<ColorPicker v-model="color" class="mb-6" />
 
-		<AppInput
+		<InputField
 			label="Title"
 			:isRequired="true"
 			:showError="submited"
 			v-model="title"
+			ref="title"
 		/>
 
-		<AppInput
+		<InputField
 			label="Enter the address"
 			:isRequired="true"
 			:showError="submited"
 			v-model="address"
+			ref="address"
 		/>
 
 		<h3
@@ -32,42 +34,47 @@
 			Contact information
 		</h3>
 
-		<AppInput
+		<InputField
 			label="Full name"
 			:isRequired="true"
 			:showError="submited"
 			v-model="fullName"
+			ref="fullName"
 		/>
 
-		<AppInput
+		<InputField
 			label="Job position"
 			:isRequired="true"
 			:showError="submited"
 			v-model="jobPosition"
+			ref="jobPosition"
 		/>
 
-		<AppInput
+		<InputField
 			label="Email address"
 			:isRequired="true"
 			:showError="submited"
 			v-model="email"
 			validateAs="email"
 			placeholder="name@example.com"
+			ref="email"
 		/>
 
-		<AppInput
+		<InputField
 			label="Phone"
 			:isRequired="true"
 			:showError="submited"
 			v-model="phone"
 			type="phone"
 			placeholder="(XXX) XXX-XXXX"
+			maskTemplate="(###) ###-####"
+			ref="phone"
 		/>
 
 		<button
 			type="submit"
 			class="button"
-			:class="isValid ? 'bg-pastelGreen' : 'bg-gray-300'"
+			:class="isValid() ? 'bg-pastelGreen' : 'bg-gray-300'"
 		>
 			Save
 		</button>
@@ -81,7 +88,7 @@ import { validateEmail } from "@/helpers";
 export default {
 	name: "OfficeForm",
 	props: {
-		editingStore: {
+		editingOffice: {
 			type: Object,
 		},
 	},
@@ -99,50 +106,25 @@ export default {
 			submited: false,
 		};
 	},
-	computed: {
-		// ...mapState({
-		//   item: state => state.namespace.item
-		// }),
-		// ...mapGetters({
-		//   item: "namespace/item"
-		// })
-
-		isValid() {
-			if (
-				this.title === "" ||
-				this.address === "" ||
-				this.fullName === "" ||
-				this.jobPosition === "" ||
-				this.email === "" ||
-				this.phone === ""
-			)
-				return false;
-
-			// https://stackoverflow.com/a/18964976/2302583
-			var testEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-			if (!validateEmail(this.email)) return false;
-
-			return true;
-		},
-	},
+	computed: {},
 	watch: {},
 	async created() {
-		if (this.editingStore && this.editingStore.id) {
-			this.id = this.editingStore.id;
-			this.title = this.editingStore.title;
-			this.address = this.editingStore.address;
-			this.fullName = this.editingStore.contact.fullName;
-			this.jobPosition = this.editingStore.contact.jobPosition;
-			this.email = this.editingStore.contact.email;
-			this.phone = this.editingStore.contact.phone;
+		if (this.editingOffice && this.editingOffice.id) {
+			this.id = this.editingOffice.id;
+			this.title = this.editingOffice.title;
+			this.address = this.editingOffice.address;
+			this.color = this.editingOffice.color;
+			this.fullName = this.editingOffice.contact.fullName;
+			this.jobPosition = this.editingOffice.contact.jobPosition;
+			this.email = this.editingOffice.contact.email;
+			this.phone = this.editingOffice.contact.phone;
 		}
 	},
 	async mounted() {},
 	methods: {
 		handleSubmit() {
 			this.submited = true;
-
-			if (!this.isValid) return false;
+			if (!this.isValid()) return false;
 
 			this.$store.dispatch("OfficeStore/upsertStore", {
 				id: this.id,
@@ -156,6 +138,16 @@ export default {
 					phone: this.phone,
 				},
 			});
+
+			this.$emit("close");
+		},
+
+		isValid() {
+			// iterate each formItem and check for its computed property `hasError`
+			for (const [key, value] of Object.entries(this.$refs)) {
+				if (value.hasError) return false;
+			}
+			return true;
 		},
 	},
 };

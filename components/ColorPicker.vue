@@ -70,6 +70,7 @@ export default {
 	watch: {
 		selected() {
 			this.$emit("input", this.selected);
+			this.opened = false;
 		},
 	},
 	async created() {
