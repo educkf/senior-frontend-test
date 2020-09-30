@@ -1,6 +1,7 @@
 export default {
 	mode: "universal",
 	components: true,
+	target: "static",
 
 	head: {
 		title: process.env.npm_package_name || "",

@@ -33,4 +33,17 @@ module.exports = {
 			},
 		},
 	},
+	purge: {
+		content: ["./src/**/*.vue", "./src/**/*.css", "./src/**/*.html"],
+
+		options: {
+			whitelist: [
+				"bg-pastelPink",
+				"bg-pastelGreen",
+				"bg-pastelYellow",
+				"bg-grayLight",
+				"bg-grayDark",
+			],
+		},
+	},
 };
