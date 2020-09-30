@@ -14,6 +14,10 @@ Link to the results: http://educkf-dogandpony-frontend.surge.sh/
 
 This link was generated using the cool Nuxt static build process (as an alternative to using the SSR and putting up a server or firebase project for it).
 
+## Test and Build
+
+Nothing too fancy here, a good old `npm install` and `npm run dev` should allow you to test it.
+
 ## What was required
 
 To recreate the design and functionality of a generic office-listings page. Please navigate through the [interactive prototype](https://www.figma.com/proto/VU2BJHrMmoSEdQmMa1EbYP/Front-end-Test?node-id=451%3A336&viewport=767%2C416%2C0.5802898406982422&scaling=min-zoom) to better understand the scope and requirements.
