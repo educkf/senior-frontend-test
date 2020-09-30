@@ -8,7 +8,7 @@ In some cases, the solution provided was totally overkill (using Vuex, for examp
 
 I also tried to make the test usefull for myself to learn something new (why not, right?). In this case, I put some extra effort (and hours) in implementing all animations using only TailwindCSS and Transition tags, without any custom CSS on the `<style>` SFC tags. This was an interesting experiment, it is helpfull and easy to do some easy transitions like a fade-in/out effect, but other cases like a toggle on the height of the component was not that easy and required some customizations on the tailwindcss config file. Also, it is quite verbose in some situations, and may not be that handy.
 
-Another interesing thing that was learnt was related to custom directives. *VueTheMask* is a small lib for masking fields, but it doesn't have a on/off switch or a wildcard to accept any value, and as I wanted to have a single input component to handle all validations and etc, it was needed to make the mask work conditionally, only when a `maskTemplate` is passed as `prop`. After some googling and search on github, I got some hints and could implement a solution for it.
+Another interesting topic to explore was *custom directives*. *VueTheMask* is a small lib for masking fields, but it doesn't have a on/off switch or a wildcard to accept any value, and as I wanted to have a single input component to handle all validations and etc, it was needed to make the mask work conditionally, only when a `maskTemplate` is passed as `prop`. After some googling and search on github, I got some hints and could implement a solution for it.
 
 Link to the results: http://educkf-dogandpony-frontend.surge.sh/
 
