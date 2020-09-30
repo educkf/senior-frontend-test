@@ -1,24 +1,26 @@
 <template>
 	<div class="w-full transition-all duration-300 min-h-40 mt-6 shadow-m">
-		<CardFace
-			v-if="!editing"
-			:office="office"
-			:opened="opened"
-			@clicked="opened = !opened"
-		/>
+		<TransitionOutin>
+			<div v-if="!editing">
+				<CardFace
+					:office="office"
+					:opened="opened"
+					@clicked="opened = !opened"
+				/>
 
-		<CardAddress
-			v-if="!editing"
-			@editing="editing = true"
-			:office="office"
-			:opened="opened"
-		/>
+				<CardAddress
+					@editing="editing = true"
+					:office="office"
+					:opened="opened"
+				/>
+			</div>
 
-		<OfficeForm
-			v-if="editing"
-			:editingOffice="office"
-			@close="editing = false"
-		/>
+			<OfficeForm
+				v-if="editing"
+				:editingOffice="office"
+				@close="editing = false"
+			/>
+		</TransitionOutin>
 	</div>
 </template>
 

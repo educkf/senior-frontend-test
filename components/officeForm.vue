@@ -82,7 +82,6 @@
 </template>
 
 <script>
-//import { mapState, mapGetters } from 'vuex';
 import { validateEmail } from "@/helpers";
 
 export default {

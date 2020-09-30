@@ -1,6 +1,6 @@
 <template>
 	<section
-		class="bg-gray-200 min-h-screen flex justify-center py-24 font-sans"
+		class="bg-gray-200 w-full min-h-screen flex justify-center py-24 font-sans"
 	>
 		<AlertMessage />
 

@@ -14,6 +14,7 @@ export { default as ErrorIcon } from '../..\\components\\icons\\ErrorIcon.vue'
 export { default as PencilIcon } from '../..\\components\\icons\\PencilIcon.vue'
 export { default as ToggleIcon } from '../..\\components\\icons\\ToggleIcon.vue'
 export { default as TrashIcon } from '../..\\components\\icons\\TrashIcon.vue'
+export { default as TransitionOutin } from '../..\\components\\transitions\\transitionOutin.vue'
 
 export const LazyAlertMessage = import('../..\\components\\AlertMessage.vue' /* webpackChunkName: "components_AlertMessage" */).then(c => c.default || c)
 export const LazyCardAddress = import('../..\\components\\cardAddress.vue' /* webpackChunkName: "components_cardAddress" */).then(c => c.default || c)
@@ -31,3 +32,4 @@ export const LazyErrorIcon = import('../..\\components\\icons\\ErrorIcon.vue' /*
 export const LazyPencilIcon = import('../..\\components\\icons\\PencilIcon.vue' /* webpackChunkName: "components_icons/PencilIcon" */).then(c => c.default || c)
 export const LazyToggleIcon = import('../..\\components\\icons\\ToggleIcon.vue' /* webpackChunkName: "components_icons/ToggleIcon" */).then(c => c.default || c)
 export const LazyTrashIcon = import('../..\\components\\icons\\TrashIcon.vue' /* webpackChunkName: "components_icons/TrashIcon" */).then(c => c.default || c)
+export const LazyTransitionOutin = import('../..\\components\\transitions\\transitionOutin.vue' /* webpackChunkName: "components_transitions/transitionOutin" */).then(c => c.default || c)

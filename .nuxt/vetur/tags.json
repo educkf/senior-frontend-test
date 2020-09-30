@@ -94,5 +94,11 @@
   },
   "LazyTrashIcon": {
     "description": "Auto imported from components/icons/TrashIcon.vue"
+  },
+  "TransitionOutin": {
+    "description": "Auto imported from components/transitions/transitionOutin.vue"
+  },
+  "LazyTransitionOutin": {
+    "description": "Auto imported from components/transitions/transitionOutin.vue"
   }
 }
