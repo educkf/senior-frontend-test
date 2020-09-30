@@ -10,7 +10,9 @@ I also tried to make the test usefull for myself to learn something new (why not
 
 Another interesing thing that was learnt was related to custom directives. *VueTheMask* is a small lib for masking fields, but it doesn't have a on/off switch or a wildcard to accept any value, and as I wanted to have a single input component to handle all validations and etc, it was needed to make the mask work conditionally, only when a `maskTemplate` is passed as `prop`. After some googling and search on github, I got some hints and could implement a solution for it.
 
-You can find a quick link for the test result here, generated using the Nuxt static build process: http://educkf-dogandpony-frontend.surge.sh/
+Link to the results: http://educkf-dogandpony-frontend.surge.sh/
+
+This link was generated using the cool Nuxt static build process (as an alternative to using the SSR and putting up a server or firebase project for it).
 
 ## What was required
 
